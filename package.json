@@ -1,0 +1,16 @@
+{
+  "name": "front-end-interview",
+  "version": "1.0.0",
+  "description": "A collection of front end interview.",
+  "main": "index.js",
+  "repository": "https://github.com/alcat2008/front-end-interview.git",
+  "author": "alcat2008 <ge_yangyang@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^0.14.2"
+  }
+}
