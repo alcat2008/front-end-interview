@@ -22,10 +22,18 @@ module.exports = {
       {
         text: 'React',
         link: '/react/'
+      },
+      {
+        text: '设计模式',
+        link: '/design-patterns/'
+      },
+      {
+        text: '前端工程化',
+        link: '/engineer/'
       }
     ],
     sidebar: {
-      // '/javascript': genSidebarConfig('JavaScript')
+      '/engineer/': genSidebarConfig('前端工程化')
     }
   }
 }
@@ -37,6 +45,7 @@ function genSidebarConfig (title) {
       collapsable: false,
       children: [
         '',
+        'webpack'
       ]
     }
   ]
