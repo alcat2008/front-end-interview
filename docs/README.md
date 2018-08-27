@@ -12,12 +12,15 @@ features:
 - title: React
   link: /react/
   details: React
-- title: 设计模式
-  link: /design-patterns/
-  details: 设计模式
-- title: 前端工程化
+- title: 综合
+  link: /comprehensive/
+  details: 综合性问题
+- title: 工程化
   link: /engineer/
   details: 前端工程化
+- title: 算法
+  link: /algorithms/
+  details: 算法
 footer: MIT Licensed | Copyright © 2018-present alcat2008
 ---
 

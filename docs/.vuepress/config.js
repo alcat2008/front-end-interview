@@ -24,28 +24,33 @@ module.exports = {
         link: '/react/'
       },
       {
-        text: '设计模式',
-        link: '/design-patterns/'
+        text: '综合',
+        link: '/comprehensive/'
       },
       {
-        text: '前端工程化',
+        text: '工程化',
         link: '/engineer/'
+      },
+      {
+        text: '算法',
+        link: '/algorithms/'
       }
     ],
     sidebar: {
-      '/engineer/': genSidebarConfig('前端工程化')
+      '/engineer/': genSidebarConfig('前端工程化', ['webpack']),
+      '/comprehensive/': genSidebarConfig('前端工程化', ['http', 'design-patterns']),
     }
   }
 }
 
-function genSidebarConfig (title) {
+function genSidebarConfig (title, children) {
   return [
     {
       title,
-      collapsable: false,
+      // collapsable: false,
       children: [
         '',
-        'webpack'
+        ...children
       ]
     }
   ]
