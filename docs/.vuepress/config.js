@@ -1,7 +1,8 @@
 module.exports = {
   title: 'Frontend-V',
   description: '前端面试集锦',
-  // dest: 'vuepress',
+  base: '/interview/',
+  dest: 'interview',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
