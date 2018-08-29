@@ -21,7 +21,7 @@ Webpack plugin 用于扩展 webpack 的功能，是一个具有 apply 方法的 
 
 plugin 是基于 Tapable 的，Tapable 允许你添加和应用插件到 JavaScript 模块中，类似于 NodeJS 的 EventEmitter，可以被继承和 mixin 到其他模块中。
 
-## Loader VS Plugin
+## Loader vs Plugin
 
 Loader 变相的扩展了 webpack，但是它只专注于转化文件（transform）这一个领域。而 plugin 的功能更加的丰富，而不仅局限于资源的加载。
 
