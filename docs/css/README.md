@@ -61,3 +61,28 @@ transform 是位于 Composite 层，而 width、left、margin 等则是位于 La
 
 - content-box 宽度和高度分别应用到元素的内容框。`W3C 盒子模型`
 - border-box 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。 `IE 盒模型`
+
+## `overflow: hidden` 清除浮动影响的原理
+
+`BFC（Block Formatting Context，块级格式化上下文）`，它规定了内部的块级元素的布局方式，默认情况下只有根元素（即 body）一个块级上下文。
+
+BFC 布局规则：
+
+- 内部的块级元素会在垂直方向，一个接一个地放置；
+- 块级元素垂直方向的距离由 margin 决定。**属于同一个 BFC 的两个相邻的块级元素会发生 margin 合并**，不属于同一个 BFC 的两个相邻的块级元素不会发生 margin 合并；
+- 每个元素的 margin box 的左边，与包含 border box 的左边相接触（对于从左往右的格式化，否则相反）。即使存在浮动也是如此；
+- BFC 的区域不会与 float box 重叠；
+- BFC 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素；外面的元素也不会影响到容器里面的子元素；
+- **计算 BFC 的高度时，浮动元素也参与计算**。
+
+一个 BFC 可以被显式触发，只需满足以下条件之一：
+
+- float 的值不为 none；
+- overflow 的值不为 visible；
+- position 的值为 fixed / absolute；
+- display 的值为 table-cell / table-caption / inline-block / flex / inline-flex。
+
+BFC 的应用：
+
+- 消除 margin 合并
+- 包含浮动子元素

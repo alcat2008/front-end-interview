@@ -3,6 +3,9 @@ module.exports = {
   description: '前端面试集锦',
   base: '/interview/',
   dest: 'interview',
+  markdown: {
+    lineNumbers: true
+  },
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
@@ -39,7 +42,7 @@ module.exports = {
     ],
     sidebar: {
       '/engineer/': genSidebarConfig('前端工程化', ['webpack']),
-      '/comprehensive/': genSidebarConfig('前端工程化', ['http', 'design-patterns']),
+      '/comprehensive/': genSidebarConfig('综合', ['web', 'http', 'design-patterns']),
     }
   }
 }
