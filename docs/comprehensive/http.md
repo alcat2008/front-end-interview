@@ -32,6 +32,6 @@
 
   ETag为 “被请求变量的实体标记”，即服务器响应时给请求 URL 标记，并在 HTTP 响应头中将其传送到客户端。
 
-`Cache-Control/Expires` 的优先级要高于 `Last-Modified/ETag`，即当本地副本根据 Cache-Control/Expires 发现还在有效期内时，则不会再次发送请求去服务器询问修改时间（Last-Modified）或实体标识（Etag）了。
+`Cache-Control/Expires（强缓存）` 的优先级要高于 `Last-Modified/ETag（协商缓存）`，即当本地副本根据 Cache-Control/Expires 发现还在有效期内时，则不会再次发送请求去服务器询问修改时间（Last-Modified）或实体标识（Etag）了。
 
 用户在按 F5 进行刷新的时候，会忽略 Cache-Control/Expires 的设置，会再次发送请求去服务器请求，而 Last-Modified/Etag 还是有效的，服务器会根据情况判断返回 304 还是 200；而当用户使用 Ctrl+F5 进行强制刷新的时候，所有的缓存机制都将失效，重新从服务器拉去资源。
